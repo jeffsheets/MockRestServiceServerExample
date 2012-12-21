@@ -15,7 +15,7 @@ public class SimpleRestService {
         String result;
         try {
             String httpResult = restTemplate.getForObject("http://google.com", String.class);
-            result = "TMS Message SUCCESS result: " + httpResult;
+            result = "Message SUCCESS result: " + httpResult;
         } catch (HttpStatusCodeException e) {
             result = "Get FAILED with HttpStatusCode: " + e.getStatusCode() + "|" + e.getStatusText();
         } catch (RuntimeException e) {
