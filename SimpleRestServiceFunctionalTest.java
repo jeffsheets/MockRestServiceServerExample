@@ -3,6 +3,14 @@ package com.jeffsheets.rest;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
+
+/** Spring 3.2.x use these */
+// import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
+// import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
+// import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
+// import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
+
+/** Spring 3.1.x use these */
 import static org.springframework.test.web.client.match.RequestMatchers.method;
 import static org.springframework.test.web.client.match.RequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.ResponseCreators.withStatus;
