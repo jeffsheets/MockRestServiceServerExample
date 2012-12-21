@@ -7,12 +7,14 @@ import static org.junit.Assert.assertThat;
 /** Spring 3.2.x use these */
 // import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 // import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
+// import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 // import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
 // import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 /** Spring 3.1.x use these */
 import static org.springframework.test.web.client.match.RequestMatchers.method;
 import static org.springframework.test.web.client.match.RequestMatchers.requestTo;
+import static org.springframework.test.web.client.response.ResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.ResponseCreators.withStatus;
 import static org.springframework.test.web.client.response.ResponseCreators.withSuccess;
 
@@ -58,7 +60,7 @@ public class SimpleRestServiceFunctionalTest extends AbstractTransactionalJUnit4
     @Test
     public void testGetMessage_500() {
         mockServer.expect(requestTo("http://google.com")).andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.INTERNAL_SERVER_ERROR));
+                .andRespond(withServerError());
 
         String result = simpleRestService.getMessage();
 
