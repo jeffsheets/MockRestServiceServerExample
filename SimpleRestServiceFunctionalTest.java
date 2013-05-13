@@ -25,14 +25,14 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
 import com.jeffsheets.rest.SimpleRestService;
 
 @ContextConfiguration(locations = {"classpath:/testconfig/applicationContext-test.xml"})
-public class SimpleRestServiceFunctionalTest extends AbstractTransactionalJUnit4SpringContextTests {
+public class SimpleRestServiceFunctionalTest extends AbstractJUnit4SpringContextTests {
     @Autowired
     private SimpleRestService simpleRestService;
 
