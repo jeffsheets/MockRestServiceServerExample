@@ -5,18 +5,18 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
 /** Spring 3.2.x use these */
-// import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
-// import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
-// import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
-// import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
-// import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
+ import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
+ import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
+ import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
+ import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
+ import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 /** Spring 3.1.x use these */
-import static org.springframework.test.web.client.match.RequestMatchers.method;
-import static org.springframework.test.web.client.match.RequestMatchers.requestTo;
-import static org.springframework.test.web.client.response.ResponseCreators.withServerError;
-import static org.springframework.test.web.client.response.ResponseCreators.withStatus;
-import static org.springframework.test.web.client.response.ResponseCreators.withSuccess;
+//import static org.springframework.test.web.client.match.RequestMatchers.method;
+//import static org.springframework.test.web.client.match.RequestMatchers.requestTo;
+//import static org.springframework.test.web.client.response.ResponseCreators.withServerError;
+//import static org.springframework.test.web.client.response.ResponseCreators.withStatus;
+//import static org.springframework.test.web.client.response.ResponseCreators.withSuccess;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +31,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.jeffsheets.rest.SimpleRestService;
 
-@ContextConfiguration(locations = {"classpath:/testconfig/applicationContext-test.xml"})
+@ContextConfiguration(locations = {"classpath:/applicationContext-test.xml"})
 public class SimpleRestServiceFunctionalTest extends AbstractJUnit4SpringContextTests {
     @Autowired
     private SimpleRestService simpleRestService;
