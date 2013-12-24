@@ -11,3 +11,7 @@ http://static.springsource.org/spring/docs/3.2.x/spring-framework-reference/html
 
 It can be used with Spring 3.1.x by using the spring-test-mvc jar:
 https://github.com/SpringSource/spring-test-mvc
+
+You can generate Eclipse project files by using the Maven command:
+    mvn eclipse:eclipse
+Then you can import the project into Eclipse and run the tests.
